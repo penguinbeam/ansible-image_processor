@@ -6,7 +6,7 @@
   yum: pkg=libvorbis,yasm,freetype,zlib,bzip2,speex,libvpx,libogg,gcc,libvpx-devel state=latest
 
 - name: write the script to build from source
-  template: src=roles/avconf-converter/files/build.sh dest=/root/build.sh
+  template: src=roles/avconf-converter/files/build-avconv.sh dest=/root/build-avconv.sh
 
 - name: write the script to process images from s3
   template: src=roles/avconf-converter/files/convert.sh dest=/root/convert.sh
