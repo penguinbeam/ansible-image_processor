@@ -6,10 +6,10 @@
   yum: pkg=libvorbis,yasm,freetype,zlib,bzip2,speex,libvpx,libogg,gcc,libvpx-devel state=latest
 
 - name: write the script to build from source
-  template: src=/tmp/build.sh dest=/root/build.sh
+  template: src=build.sh dest=/root/build.sh
 
 - name: write the script to process images from s3
-  template: src=/tmp/convert.sh dest=/root/convert.sh
+  template: src=convert.sh dest=/root/convert.sh
 
 - name: download av software
   get_url: url=http://libav.org/releases/libav-10.1.tar.gz dest=/root/libav-10.1.tar.gz mode=0440 force=no
