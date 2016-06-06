@@ -1,0 +1,5 @@
+---
+# file: dostuff.yml
+- hosts: localhost
+  roles:
+    - avconf-converter
