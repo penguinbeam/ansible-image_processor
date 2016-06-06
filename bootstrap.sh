@@ -1,5 +1,10 @@
 #!/bin/bash
-#Needs role: Get_s3_bucket (s3 permissions)
+#Needs role: Get_s3_bucket (My custom role to provide s3 permissions)
+
+#To get this far you’ll have needed to do this:
+# yum install -y git
+# git clone https://github.com/penguinbeam/ansible-image_processor.git
+# cd ansible-image_processor/
 
 pip install ansible
 
