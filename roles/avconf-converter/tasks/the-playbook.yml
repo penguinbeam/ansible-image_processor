@@ -9,7 +9,7 @@
   template: src=roles/avconf-converter/files/build-avconv.sh dest=/root/build-avconv.sh
 
 - name: write the script to process images from s3
-  template: src=roles/avconf-converter/files/convert.sh dest=/root/convert.sh
+  template: src=roles/avconf-converter/templates/convert.sh.j2 dest=/root/convert.sh
 
 - name: download av software
   get_url: url=http://libav.org/releases/libav-10.1.tar.gz dest=/root/libav-10.1.tar.gz mode=0440 force=no
