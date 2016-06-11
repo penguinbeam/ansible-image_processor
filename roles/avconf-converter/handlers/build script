@@ -1,3 +1,0 @@
-—-—
-- name : run build script
-  script: /root/build-avconv.sh -
