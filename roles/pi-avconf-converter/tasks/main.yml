@@ -7,4 +7,14 @@
 - name: Install avconv
   apt: name=libav-tools state=latest
 
+- name: write the script to convert images to a movie
+  template: src=roles/pi-avconf-converter/files/makemovie.sh dest=/usr/local/bin/makemovie.sh mode=0755
 
+- name: write the wrapper script to fetch the images and prepare the script
+  template: src=roles/pi-avconf-converter/templates/wrapper.sh dest=/usr/local/bin/wrapper.sh mode=0755
+
+- name: Creates hourly cronjob to run processing script
+  cron: hour="*/1"
+        name="Run image conversion job"
+        user="root"
+        job="/usr/local/bin/wrapper.sh"
