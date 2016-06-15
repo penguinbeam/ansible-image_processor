@@ -1,0 +1,10 @@
+---
+- name: Install python apt dependancy
+  command: apt-get install -y python-apt
+  args:
+    creates: /usr/share/python-apt
+
+- name: Install avconv
+  apt: name=libav-tools state=latest
+
+

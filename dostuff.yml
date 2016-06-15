@@ -1,0 +1,5 @@
+---
+# file: dostuff.yml
+- hosts: somenodes
+  roles:
+    - avconf-converter
