@@ -1,0 +1,7 @@
+---
+- name: Test some things
+  hosts: rpis-ubuntu
+  become: true
+
+  roles:
+    - pi-avconf-converter

@@ -1,3 +1,4 @@
+ansible_ssh_user: ubuntu
 ansible_become: yes
 ansible_become_method: sudo
-remote_user: ubuntu
+bucket_name: no-needed-if-no-s3
