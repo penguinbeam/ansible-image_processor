@@ -1,0 +1,6 @@
+---
+- name: Install vim
+  apt: name=libav-tools state=latest
+
+- name: write the script to process images from s3
+  template: src=roles/avconf-converter/templates/convert.sh.j2 dest=/root/convert.sh
